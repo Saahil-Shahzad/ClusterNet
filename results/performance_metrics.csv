@@ -1,0 +1,12 @@
+Metric,Value,Unit,Notes
+Sequential Time,43059,ms,Total wall-clock time for baseline
+Distributed Time,8437,ms,Total wall-clock time for 3 workers + ForkJoinPool
+Speedup Factor,5.10,x,Tseq / Tdist
+Sequential WCSS,1585734372.29,quality metric,Within-Cluster Sum-of-Squares
+Distributed WCSS,1585734372.29,quality metric,Bit-identical to sequential
+Quality Match,YES,boolean,Implementations produce identical WCSS
+Process Count,3,processes,Number of worker processes
+Threads per Worker,8,threads,ForkJoinPool size
+Effective Parallelism,24,thread equivalents,3 processes × 8 threads (upper bound)
+Efficiency,60-65,%,Actual performance vs ideal multi-core scaling
+First Iteration Penalty,30-50,%,JVM warm-up and JIT compilation overhead

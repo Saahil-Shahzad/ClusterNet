@@ -1,0 +1,14 @@
+Parameter,Value,Unit,Description
+Dataset Size (N),1000000,points,Number of data points
+Number of Clusters (K),20,clusters,Number of clusters
+Feature Dimensionality (F),64,dimensions,Number of features per point
+Maximum Iterations,50,iterations,Max iterations before termination
+Convergence Threshold (eps),0.01,shift,Threshold for convergence detection
+Number of Workers,3,processes,Number of worker processes
+ForkJoinPool Size per Worker,8,threads,Threads in each worker's ForkJoinPool
+Transport Protocol,TCP sockets,protocol,Inter-process communication method
+Communication Port,9001,port,TCP port for master-worker communication
+Language / Runtime,Java (JDK 11+),runtime,Programming language and runtime
+Data Generation Seed,12345,seed,Random seed for dataset generation
+Centroid Initialization Seed,42,seed,Random seed for initial centroids
+Hardware,Apple MacBook Air,hardware,Target deployment platform

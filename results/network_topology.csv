@@ -1,0 +1,7 @@
+Protocol,Connection Count,Local Address,Remote Address,State,Direction,Purpose,TCP Port
+TCP,3,127.0.0.1:9001,127.0.0.1:59938,ESTABLISHED,Inbound (M),Master listening,9001
+TCP,3,127.0.0.1:9001,127.0.0.1:59939,ESTABLISHED,Inbound (M),Master listening,9001
+TCP,3,127.0.0.1:9001,127.0.0.1:59940,ESTABLISHED,Inbound (M),Master listening,9001
+TCP,3,127.0.0.1:59938,127.0.0.1:9001,ESTABLISHED,Outbound (W1),Worker 1 connected,59938
+TCP,3,127.0.0.1:59939,127.0.0.1:9001,ESTABLISHED,Outbound (W2),Worker 2 connected,59939
+TCP,3,127.0.0.1:59940,127.0.0.1:9001,ESTABLISHED,Outbound (W3),Worker 3 connected,59940

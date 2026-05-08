@@ -1,0 +1,43 @@
+=== Distributed K-Means Master ===
+Parameters: N=90000  K=5  F=16  maxIter=30  workers=3  port=9001
+
+[Master] Distributed K-Means  N=90000  K=5  F=16  W=3  maxIter=30
+[Master] Listening on port 9001, waiting for 3 worker(s)...
+[Master] Worker 1 connected from /127.0.0.1:50183
+[Master] Worker 2 connected from /127.0.0.1:50184
+[Master] Worker 3 connected from /127.0.0.1:50185
+[Master] Generating dataset...
+[Master] Dataset generated.
+[Master] INIT sent to Worker 1  (rows 0..29999)
+[Master] INIT sent to Worker 2  (rows 30000..59999)
+[Master] INIT sent to Worker 3  (rows 60000..89999)
+[Master] Waiting for worker ready signals...
+[Master] Worker 1 ready
+[Master] Worker 2 ready
+[Master] Worker 3 ready
+[Master] Iter  1: centroids broadcast, awaiting results...
+[Master] Partial result received from Worker 1 (iter 1)
+[Master] Partial result received from Worker 3 (iter 1)
+[Master] Partial result received from Worker 2 (iter 1)
+[Master] Iter  1 complete  max-shift=206.017532  counts=[11709,6192,17826,19518,34755]
+[Master] Iter  2: centroids broadcast, awaiting results...
+[Master] Partial result received from Worker 2 (iter 2)
+[Master] Partial result received from Worker 3 (iter 2)
+[Master] Partial result received from Worker 1 (iter 2)
+[Master] Iter  2 complete  max-shift=116.672089  counts=[8999,8963,17969,18070,35999]
+[Master] Iter  3: centroids broadcast, awaiting results...
+[Master] Partial result received from Worker 3 (iter 3)
+[Master] Partial result received from Worker 1 (iter 3)
+[Master] Partial result received from Worker 2 (iter 3)
+[Master] Iter  3 complete  max-shift=0.000000  counts=[8999,8963,17969,18070,35999]
+[Master] Converged at iteration 3 (shift=0.000000)
+
+=== Distributed K-Means Result ===
+Wall-clock time    : 245 ms
+Converged at iter  : 3
+Workers            : 3 (each with ForkJoinPool threads)
+WCSS (quality)     : 1412949011.76
+Final centroids (first 3):
+  C[0] = [1.538, 27.813, -140.370, 101.477, ...]
+  C[1] = [-89.459, 24.152, 53.520, 69.507, ...]
+  C[2] = [7.469, 38.035, -3.936, -0.371, ...]

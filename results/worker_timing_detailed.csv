@@ -1,0 +1,13 @@
+Iteration,Worker 1 Time (ms),Worker 2 Time (ms),Worker 3 Time (ms),Min Time (ms),Max Time (ms),Time Variance (ms),Notes
+1,219,208,207,207,219,12,JVM warm-up: interpretation, JIT compilation, cache priming
+2,158,156,154,154,158,4,First steady-state iteration
+3,186,175,168,168,186,18,Minor variance
+4,156,154,152,152,156,4,Convergence to steady state
+5,152,150,151,150,152,2,Steady state reached
+6,151,151,150,150,151,1,Perfect load balance
+7,153,151,149,149,153,4,Steady state
+8,152,150,152,150,152,2,Steady state
+9,151,149,150,149,151,2,Steady state
+10,152,151,150,150,152,2,Steady state maintained
+25,152,152,151,151,152,1,Stable load distribution
+50,151,150,152,150,152,2,Final iteration - steady state throughout

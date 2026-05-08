@@ -1,0 +1,16 @@
+Comparison Metric,Sequential Baseline,Distributed Implementation (3 Workers),Ratio / Difference
+Total Wall-Clock Time,43059 ms,8437 ms,5.10x faster (distributed)
+WCSS (clustering quality),1585734372.29,1585734372.29,Bit-identical (0 difference)
+Quality Verification,✓ PASS,✓ PASS,Both match perfectly
+Centroid Trajectories,Matched to 6 decimals,Matched to 6 decimals,Confirmed correctness
+Implementation Approach,Single-threaded JVM,3 processes + ForkJoinPool,Two-level parallelism
+Parallelism Level,1 thread,24 thread equivalents (3×8),24x theoretical capacity
+Measured Efficiency vs Ideal,Single-threaded baseline,60-65% (5.10x / 8 threads),Below-theoretical but strong
+Load Balance Metric,N/A,Std Dev 10.5-12.6 ms,Excellent balance across workers
+First Iteration Penalty,Not measured separately,30-50% slower (JVM warm-up),Expected HotSpot behavior
+Per-Iteration Steady State,Not measured,~150 ms average,Stable after iteration 4-5
+Max Centroid Shift (Iter 1),39.730038,39.730038,Identical initialization
+Max Centroid Shift (Iter 50),0.076721,0.076721,Identical convergence trajectory
+Convergence Criterion Met,No (stopped at maxIter=50),No (stopped at maxIter=50),Both limited by iteration cap
+Convergence Threshold (eps),0.01,0.01,Not reached within 50 iterations
+Final Centroid Coordinates,Computed exactly,Computed exactly,Numerically identical output

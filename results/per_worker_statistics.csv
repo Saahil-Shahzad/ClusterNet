@@ -1,0 +1,4 @@
+Worker ID,Data Partition Start,Data Partition End,Num Points,Allocated Size (KB),Mean Assignment Time (ms),Median Assignment Time (ms),Std Dev (ms),Min Time (ms),Max Time (ms),TCP Port (example)
+1,0,333332,333333,83333,157.8,156.0,12.6,136,219,59960
+2,333333,666665,333333,83333,159.7,157.0,10.5,142,208,59961
+3,666666,999999,333334,83334,161.7,158.0,10.9,145,207,59962

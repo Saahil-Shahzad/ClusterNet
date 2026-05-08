@@ -1,0 +1,3 @@
+Implementation,Wall-Clock Time (ms),WCSS,Convergence Criterion,Iterations Completed,Final Centroid C[0] Dimension 1,Final Centroid C[1] Dimension 1,Final Centroid C[2] Dimension 1
+Sequential Baseline,43059,1585734372.29,maxIter reached (eps=0.01 not met),50,-63.632,25.194,-66.175
+Distributed (3 Workers + ForkJoinPool),8437,1585734372.29,maxIter reached (eps=0.01 not met),50,-63.632,25.194,-66.175

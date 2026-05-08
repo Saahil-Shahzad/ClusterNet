@@ -1,0 +1,7 @@
+Message Type,Type Code,Direction,Purpose,Payload Size (bytes),Frequency,Total Bandwidth per Run
+INIT,0x01,Master -> Worker,Worker ID and local partition assignment,333333 × 64 × 4 ≈ 85331968,Once at startup (per worker),255.99 MB (3 workers)
+CENTROID_BROADCAST,0x02,Master -> Worker,Current centroid set,20 × 64 × 4 = 5120,Once per iteration per worker,256 KB total (50 iter × 3 workers)
+PARTIAL_RESULT,0x03,Worker -> Master,Local sums and counts,20 × 64 × 8 + 20 × 4 = 10320,Once per iteration per worker,516 KB total (50 iter × 3 workers)
+CONVERGED,0x04,Master -> Worker,Signal convergence reached,Variable,Once at termination (per worker),< 1 KB
+SHUTDOWN,0x05,Master -> Worker,Terminate worker process,Variable,Once at termination (per worker),< 1 KB
+HEARTBEAT,0x06,Master <-> Worker,Liveness check / iteration sync,Variable,Per iteration per worker,Negligible

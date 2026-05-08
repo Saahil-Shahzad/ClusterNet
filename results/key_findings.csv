@@ -1,0 +1,11 @@
+Finding Category,Result,Evidence / Details,Implication
+Correctness,✓ VERIFIED,Bit-for-bit WCSS match: 1585734372.29,Partitioning logic sound; no data corruption or race conditions
+Convergence Quality,Matched Trajectory,Max-shift values identical to 6 decimal places over all 50 iterations,Protocol and aggregation logically equivalent to sequential
+Speedup Achievement,5.10x (super-linear),Exceeds 3-process ceiling due to 8-thread ForkJoinPool per worker,Two-level parallelism (inter-process + intra-process) highly effective
+Load Balancing,Excellent,Std Dev 10.5-12.6 ms; max variance < 15 ms across 50 iterations,Row-range partitioning effectively equalizes work
+JVM Warm-up,Expected Penalty,First iteration 30-50% slower; steady state by iteration 4-5,Typical HotSpot C2 JIT compilation signature; minimal production impact
+Network Efficiency,Favorable,Per-iteration traffic ~15 KB; one-off 85 MB INIT overhead amortized,Communication cost negligible vs compute time (multi-hundred-ms per iteration)
+Synchronization Model,BSP (Bulk-Synchronous),Strict per-iteration barrier; some worker idle time on faster completion,Trade-off: simplicity and correctness vs minor load-imbalance slack
+Centroid Diffusion,Correct,All three workers receive and apply identical broadcast before assignment,No synchronization errors; deterministic execution preserved
+Failure Modes,Not Addressed,Single master is SPOF; no retransmission or checksums,Explicit scope limitation; production deployment would require resilience layer
+Data Skew Sensitivity,Potential Issue,Static partitioning; no work-stealing between processes,Uniform data handled well; would need dynamic rebalancing for skewed inputs

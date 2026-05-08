@@ -1,0 +1,12 @@
+
+  SPEEDUP SUMMARY:
+  Sequential  time  : 167 ms
+  Distributed time  : 242 ms
+  Speedup           : 0.69x
+  Sequential  WCSS  : 1412949011.76
+  Distributed WCSS  : 1412949011.76
+
+
+
+
+

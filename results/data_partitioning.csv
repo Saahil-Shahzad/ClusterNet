@@ -1,0 +1,5 @@
+Worker,Row Range Start,Row Range End,Total Points,Allocations (KB),Approximate Size (MB),Percentage of Dataset,Load Balance Status
+Worker 1,0,333332,333333,83333,83.33,33.333%,Balanced
+Worker 2,333333,666665,333333,83333,83.33,33.333%,Balanced
+Worker 3,666666,999999,333334,83334,83.34,33.334%,Balanced (absorbs remainder)
+TOTAL,0,999999,1000000,250000,250,100%,Evenly distributed

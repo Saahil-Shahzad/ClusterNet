@@ -1,0 +1,12 @@
+[Worker] Connecting to localhost:9001...
+[Worker] Connected on attempt 1
+[Worker 1] INIT: partition=30000 K=5 F=16
+[Worker 1] ForkJoinPool: 8 threads
+[Worker 1] HEARTBEAT iter=1
+[Worker 1] Assignment done in 122 ms
+[Worker 1] HEARTBEAT iter=2
+[Worker 1] Assignment done in 13 ms
+[Worker 1] HEARTBEAT iter=3
+[Worker 1] Assignment done in 14 ms
+[Worker 1] CONVERGED - shutting down
+[Worker 1] Done
